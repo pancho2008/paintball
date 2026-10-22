@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Xtreme-Park Mendoza: paintball, adrenalina y estrategia en plena montaña." />
+  <link rel="canonical" href="https://xtremeparkmza.com" />
+  <meta property="og:url" content="https://xtremeparkmza.com" />
+  <meta property="og:title" content="Xtreme-Park Mendoza | Paintball sin límites" />
+  <title>Xtreme-Park Mendoza | Paintball sin límites</title>
+  <style>
+    :root { --yellow:#ffd400; --black:#080808; --cream:#f7f5ed; --charcoal:#191919; --line:rgba(247,245,237,.2); }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--cream); background:var(--black); font-family:Arial, Helvetica, sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:22px 6vw; position:absolute; width:100%; z-index:5; }
+    .logo { font-weight:900; font-size:1.05rem; line-height:.85; text-transform:uppercase; letter-spacing:-.08em; }
+    .logo b { color:var(--yellow); font-size:1.55rem; }
+    .nav-links { display:flex; gap:26px; font-size:.82rem; font-weight:700; text-transform:uppercase; }
+    .btn { display:inline-block; padding:15px 22px; border:2px solid var(--yellow); color:var(--black); background:var(--yellow); font-weight:900; text-transform:uppercase; font-size:.76rem; letter-spacing:.04em; transition:.2s; }
+    .btn:hover { transform:translate(-3px,-3px); box-shadow:5px 5px 0 var(--cream); }
+    .hero { min-height:760px; padding:145px 6vw 62px; position:relative; overflow:hidden; display:grid; align-content:end; background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.62) 52%,rgba(0,0,0,.18)), radial-gradient(circle at 76% 38%,rgba(255,212,0,.34),transparent 17%), linear-gradient(135deg,#343434 0%,#171717 40%,#050505 100%); }
+    .hero:after { content:""; position:absolute; inset:0; opacity:.28; pointer-events:none; background-image:linear-gradient(120deg,transparent 45%,rgba(255,212,0,.25) 45%,rgba(255,212,0,.25) 47%,transparent 47%), repeating-linear-gradient(0deg,transparent 0 4px,rgba(255,255,255,.06) 5px); mix-blend-mode:screen; }
+    .eyebrow { color:var(--yellow); font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; font-weight:800; }
+    h1 { max-width:810px; font-size:clamp(3.7rem,9vw,8rem); line-height:.8; letter-spacing:-.085em; margin:18px 0 30px; text-transform:uppercase; position:relative; z-index:1; }
+    h1 span { color:var(--yellow); display:block; }
+    .hero-subtitle { position:relative; z-index:1; margin:-10px 0 18px; color:var(--yellow); font-size:clamp(1rem,2vw,1.35rem); font-weight:800; letter-spacing:.02em; }
+    .hero-copy { max-width:470px; font-size:1.08rem; line-height:1.5; margin:0 0 32px; position:relative; z-index:1; }
+    .hero-stamp { position:absolute; right:7vw; bottom:75px; z-index:1; border:2px solid var(--yellow); border-radius:50%; width:150px; height:150px; display:grid; place-items:center; text-align:center; color:var(--yellow); font-size:.76rem; text-transform:uppercase; font-weight:800; transform:rotate(12deg); }
+    .strip { padding:17px 6vw; background:var(--yellow); color:var(--black); font-weight:900; text-transform:uppercase; letter-spacing:.04em; word-spacing:17px; overflow:hidden; white-space:nowrap; }
+    section { padding:90px 6vw; } .section-label { color:var(--yellow); font-size:.75rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    h2 { max-width:730px; font-size:clamp(2.5rem,5vw,4.8rem); line-height:.9; letter-spacing:-.06em; text-transform:uppercase; margin:16px 0 45px; }
+    .experience { display:grid; grid-template-columns:1.05fr 1fr; gap:65px; align-items:end; }
+    .copy { color:#c9cbc4; line-height:1.65; max-width:510px; } .copy strong { color:var(--cream); }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); }
+    .stat { padding:21px 12px 0 0; border-right:1px solid var(--line); } .stat:not(:first-child) { padding-left:17px; } .stat:last-child { border:0; }
+    .stat b { font-size:2.1rem; color:var(--yellow); display:block; letter-spacing:-.08em; }.stat small { text-transform:uppercase; font-size:.66rem; font-weight:700; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }.card { min-height:285px; padding:28px; display:flex; flex-direction:column; justify-content:end; border:1px solid var(--line); background:linear-gradient(145deg,#3e3e3e,#151515 68%); position:relative; overflow:hidden; }.card:nth-child(2){background:linear-gradient(145deg,#4a401b,#1f1b0d 68%)}.card:nth-child(3){background:linear-gradient(145deg,#303030,#0b0b0b 68%)}.card:before { content:attr(data-number); position:absolute; top:-28px; right:8px; color:rgba(247,245,237,.09); font-weight:900; font-size:9rem; letter-spacing:-.12em; }.card h3 { font-size:1.55rem; margin:0 0 8px; text-transform:uppercase; letter-spacing:-.05em; }.card p { margin:0; color:#d8d8d3; font-size:.9rem; line-height:1.45; }
+    .reviews { background:var(--charcoal); }.reviews-layout { display:grid; grid-template-columns:.85fr 1.15fr; gap:55px; align-items:start; }.review-form { padding:28px; background:var(--black); border:1px solid var(--line); }.review-form label { display:block; margin:19px 0 8px; font-size:.72rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }.review-form input[type="text"], .review-form textarea { width:100%; padding:13px; border:1px solid #555; background:#111; color:var(--cream); font:inherit; }.review-form textarea { min-height:104px; resize:vertical; }.stars { display:flex; gap:5px; direction:rtl; justify-content:flex-end; }.stars input { position:absolute; opacity:0; }.stars label { cursor:pointer; margin:0; color:#555; font-size:2rem; line-height:1; transition:color .15s; }.stars label:hover, .stars label:hover ~ label, .stars input:checked ~ label { color:var(--yellow); }.upload { display:block; border:1px dashed #777; padding:15px; color:#c9c9c3; cursor:pointer; text-align:center; font-size:.8rem; }.upload input { display:none; }.photo-preview { display:none; width:100%; height:135px; object-fit:cover; margin-top:10px; border:1px solid var(--yellow); }.review-list { display:grid; gap:13px; }.review { padding:21px; border-left:3px solid var(--yellow); background:#101010; display:grid; grid-template-columns:1fr auto; gap:8px 20px; }.review h3 { margin:0; font-size:1rem; text-transform:uppercase; }.review .rating { color:var(--yellow); letter-spacing:.1em; }.review p { grid-column:1/-1; margin:2px 0 0; color:#d4d4cf; line-height:1.5; }.review img { grid-column:1/-1; width:100%; max-height:240px; object-fit:cover; margin-top:6px; }.empty { margin:0; color:#bdbdb7; }
+    .cta { background:var(--yellow); color:var(--black); display:grid; grid-template-columns:1.3fr .7fr; gap:30px; align-items:end; }.cta .section-label { color:var(--black); }.cta h2 { margin-bottom:0; }.cta .btn { background:var(--black); border-color:var(--black); color:var(--cream); justify-self:end; }.cta .btn:hover { box-shadow:5px 5px 0 var(--cream); }
+    footer { padding:30px 6vw; display:flex; justify-content:space-between; font-size:.75rem; color:#b2b7ac; text-transform:uppercase; }
+    @media (max-width:720px) { .nav-links { display:none; }.hero { min-height:700px; }.hero-stamp { width:104px;height:104px;right:5vw;bottom:55px;font-size:.56rem; }.experience,.cta,.reviews-layout { grid-template-columns:1fr; gap:30px; }.cards { grid-template-columns:1fr; }.card { min-height:210px; }.cta .btn { justify-self:start; } section { padding:65px 6vw; }.stats { margin-top:22px; } footer { gap:20px; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="#inicio">XTREME<br><b>PARK</b> MENDOZA</a>
+    <div class="nav-links"><a href="#experiencia">Experiencia</a><a href="#juegos">Modalidades</a><a href="#resenas">Reseñas</a><a href="#reservas">Reservas</a></div>
+    <a class="btn" href="https://wa.me/5492610000000" target="_blank" rel="noreferrer">Reservá ahora</a>
+  </nav>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="eyebrow">Mendoza · Argentina</div>
+      <h1>Entrá al <span>juego.</span></h1>
+      <p class="hero-subtitle">BIENVENIDOS A NUESTRO PERFECTO CAOS.</p>
+      <p class="hero-copy">Estrategia, adrenalina y pura acción. Reuní a tu equipo y viví el paintball como nunca antes.</p>
+      <a class="btn" href="#reservas">Quiero jugar</a>
+      <div class="hero-stamp">100%<br>adrenalina<br>en equipo</div>
+    </section>
+    <div class="strip">Paintball · Cumpleaños · Empresas · Despedidas · Paintball · Cumpleaños · Empresas · Despedidas ·</div>
+    <section class="experience" id="experiencia">
+      <div><div class="section-label">La experiencia Xtreme</div><h2>Tu equipo. Tu estrategia. Tu victoria.</h2></div>
+      <div><p class="copy">No es solo disparar: es <strong>coordinar, avanzar y celebrar cada misión.</strong> En Xtreme-Park Mendoza tenés escenarios preparados para que la diversión sea segura, intensa e inolvidable.</p><div class="stats"><div class="stat"><b>6+</b><small>Jugadores</small></div><div class="stat"><b>60–90'</b><small>De acción</small></div><div class="stat"><b>100%</b><small>Equipados</small></div></div></div>
+    </section>
+    <section id="juegos"><div class="section-label">Elegí tu misión</div><h2>Dos modalidades. Toda la adrenalina.</h2><div class="cards"><article class="card" data-number="01"><h3>Juego de adultos +13</h3><p>Desafiá a tu equipo en misiones como desactivar la bomba o captura la bandera.</p></article><article class="card" data-number="02"><h3>Juego de niños +5</h3><p>Aventura segura y divertida con desafíos de desactivar la bomba y captura la bandera.</p></article></div></section>
+    <section class="reviews" id="resenas"><div class="section-label">La voz del equipo</div><h2>Contanos tu experiencia.</h2><div class="reviews-layout"><form class="review-form" id="review-form"><label for="reviewer">Tu nombre</label><input id="reviewer" name="reviewer" type="text" maxlength="60" required placeholder="Ej. Martina G."><label>Tu calificación</label><div class="stars" aria-label="Calificación de estrellas"><input id="star5" name="rating" value="5" type="radio" checked><label for="star5" title="5 estrellas">★</label><input id="star4" name="rating" value="4" type="radio"><label for="star4" title="4 estrellas">★</label><input id="star3" name="rating" value="3" type="radio"><label for="star3" title="3 estrellas">★</label><input id="star2" name="rating" value="2" type="radio"><label for="star2" title="2 estrellas">★</label><input id="star1" name="rating" value="1" type="radio"><label for="star1" title="1 estrella">★</label></div><label for="comment">Tu reseña</label><textarea id="comment" name="comment" maxlength="500" required placeholder="¿Cómo vivieron la misión?"></textarea><label class="upload" for="photo">＋ Agregá una foto de tu equipo<input id="photo" name="photo" type="file" accept="image/*"></label><img class="photo-preview" id="photo-preview" alt="Vista previa de la foto seleccionada"><label></label><button class="btn" type="submit">Publicar reseña</button></form><div class="review-list" id="review-list"><article class="review"><h3>Tu opinión importa</h3><span class="rating">★★★★★</span><p class="empty">Sé el primero en contar cómo fue tu misión en Xtreme-Park Mendoza.</p></article></div></div></section>
+    <section class="cta" id="reservas"><div><div class="section-label">¿Listos para la acción?</div><h2>Reservá tu próxima misión.</h2></div><a class="btn" href="https://wa.me/5492610000000" target="_blank" rel="noreferrer">Hablar por WhatsApp →</a></section>
+  </main>
+  <footer><span>© 2026 Xtreme-Park Mendoza</span><a href="https://xtremeparkmza.com">xtremeparkmza.com</a><span>Paintball · Mendoza, Argentina</span></footer>
+  <script>
+    const form = document.querySelector('#review-form'), photoInput = document.querySelector('#photo'), preview = document.querySelector('#photo-preview'), list = document.querySelector('#review-list');
+    let photoData = '';
+    photoInput.addEventListener('change', () => { const file = photoInput.files[0]; if (!file || !file.type.startsWith('image/')) return; const reader = new FileReader(); reader.onload = () => { photoData = reader.result; preview.src = photoData; preview.style.display = 'block'; }; reader.readAsDataURL(file); });
+    form.addEventListener('submit', (event) => { event.preventDefault(); const name = document.querySelector('#reviewer').value.trim(), comment = document.querySelector('#comment').value.trim(), rating = document.querySelector('input[name="rating"]:checked').value, review = document.createElement('article'); review.className = 'review'; const title = document.createElement('h3'); title.textContent = name; const stars = document.createElement('span'); stars.className = 'rating'; stars.textContent = '★'.repeat(rating) + '☆'.repeat(5 - rating); const text = document.createElement('p'); text.textContent = comment; review.append(title, stars, text); if (photoData) { const image = document.createElement('img'); image.src = photoData; image.alt = 'Foto compartida por ' + name; review.append(image); } list.querySelector('.empty')?.closest('.review')?.remove(); list.prepend(review); form.reset(); photoData = ''; preview.removeAttribute('src'); preview.style.display = 'none'; });
+  </script>
+</body>
+</html>
